@@ -1,5 +1,14 @@
-.logo {
+.header {
   background-color: #1b818d;
   text-align: center;
-  width: 100%;
+}
+
+.menu {
+  text-align: right;
+}
+
+
+
+.footer {
+  background-color: rgb(201, 201, 201);
 }
