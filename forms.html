@@ -5,12 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calcultion - 計算サイト - Form</title>
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="scripts/script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
         <div class="header">
-            <img src="images/logo.jpg" alt="ロゴ" width="300" class="img-fluid" id="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="ロゴ" width="300" class="img-fluid" id="logo">
+            </a>
 
             <a href="forms.html" id="user-btn">
                 <button class="btn btn-outline-primary" type="button">
@@ -29,9 +33,9 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">ホーム</a></li>
+                    <li><a class="dropdown-item" href="#">連絡先</a></li>
+                    <li><a class="dropdown-item" href="#">このサイトの説明</a></li>
                 </ul>
             </div>
         </div>
@@ -40,18 +44,19 @@
             <form class="input-form">
                 <label for="user-name" class="form-label" id="label">ユーザーネーム：</label>
                 <input type="text" class="form-control" id="user-name" placeholder="user name">
-                <button type="submit" class="btn btn-primary" id="submit">送信</button>
+                <button type="submit" class="btn btn-primary" id="user-name-submit">送信</button>
             </form>
 
             <div class="message">
-                <div>これはLocalStrageの練習です。</div>
-                <div>もし情報を保存したくないなら、シークレットウィンドウを使うか、</div>
+                <div>これはLocalStrageの練習です。もし情報を保存したくないなら、シークレットウィンドウを使うか、</div>
                 <div>右クリックして検証を押してのApplicationのLocalStorageから直接消してください。</div>
             </div>
         </div>
 
         <div class="footer1">
-            <img src="images/logo.jpg" alt="ロゴ" width="200" class="img-fluid rounded">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="ロゴ" width="200" class="img-fluid rounded">
+            </a>
             <div class="footer-content">
                 <div>
                     このサイトをご覧いただきありがとうございます。
