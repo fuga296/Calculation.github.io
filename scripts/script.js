@@ -26,6 +26,7 @@ function selectContent() {
         }
     });
     document.querySelector('#user-name').value = '';
+    document.querySelector('#result').innerHTML = '計算結果がここに表示されます';
 }
 
 function showContent(content) {
