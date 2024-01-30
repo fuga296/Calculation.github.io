@@ -44,7 +44,7 @@ body{
   border: none;
   outline: none;
   margin-left: max(1.464vw, 8px);
-  margin-right: 12px;
+  margin-right: max(0.88vw, 5px);
 }
 
 
@@ -211,10 +211,10 @@ body{
 }
 
 #bottom-logo {
-  width: max(14.64vw, 80px);
+  width: max(14.64vw, 50px);
 }
 
 .footer-content {
   font-size: max(1.1vw, 7px);
-  margin-left: max(14.6vw, 4px);
+  margin-left: max(14.6vw, 3px);
 }
