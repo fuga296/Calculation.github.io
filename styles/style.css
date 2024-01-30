@@ -1,3 +1,12 @@
+body{
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+}
+
+
+
 .header {
   display: flex;
   justify-content: center;
@@ -5,18 +14,29 @@
   background-color: #1b818d;
 }
 
-#logo {
+#top-logo {
+  width: max(22vw, 200px);
+}
+
+.logo {
   margin: 0;
 }
 
-#user-link {
-  margin-left: auto;
+.user-icon {
+  width: max(3.66vw, 20px);
+  height: max(3.66vw, 20px);
+}
+
+.menu-icon {
+  width: max(3.66vw, 20px);
+  height: max(3.66vw, 20px);
 }
 
 #user-btn {
   background-color: #1b818d;
   border: none;
   outline: none;
+  margin-left: auto;
 }
 
 #menu-btn {
@@ -29,12 +49,20 @@
 
 
 
+.content {
+  display: none;
+}
+
+.main-content {
+  display: block;
+}
+
 #heading {
-  font-size: 40px;
+  font-size: max(16px, 3vw);
   font-weight: bold;
   margin-top: 30px;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: min(5px, 0.366vw);
 }
 
 
@@ -44,20 +72,21 @@ form {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 60px 10px 10px 10px;
+  margin: max(10px, 4.4vw) 10px 10px 10px;
 }
 
 #input-formula {
-  font-size: 40px;
-  width: 1160px;
-  height: 80px;
+  font-size: 3vw;
+  width: 82%;
+  height: 5.8vw;
   margin-right: 15px;
+  box-sizing: border-box;
 }
 
 #calculate-btn {
-  font-size: 35px;
-  width: 150px;
-  height: 80px;
+  font-size: 2.56vw;
+  width: 11%;
+  height: 5.8vw;
 }
 
 
@@ -66,43 +95,28 @@ form {
   background-color: rgb(241, 255, 255);
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  padding: 150px;
-  margin: 100px 50px 120px 50px;
+  padding: max(8.8vw, 10px);
+  margin: max(7.32vw, 10px) 50px max(8.8vw, 10px) 50px;
 }
 
 #result {
-  font-size: 35px;
+  font-size: max(2.56vw, 28px);
   color: rgb(81, 81, 81);
   font-weight: lighter;
   text-align: center;
 }
 
-#operators {
+.operators {
   border-bottom: 1px solid rgb(205, 205, 205);
-  margin-bottom: 120px;
+  margin-bottom: max(8.8vw, 10px);
+  font-size: max(1.4vw, 12px);
 }
 
 .operator {
-  font-size: 20px;
+  font-size: max(1.46vw, 15px);
   font-weight: bold;
 }
 
-
-
-
-.footer {
-  font-size: 5px;
-  font-family: "リュウミン L-KL";
-  background-color: rgb(220, 220, 220);
-  margin-top: 50px;
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-content {
-  font-size: 15px;
-}
 
 
 
@@ -148,4 +162,37 @@ form {
   justify-content: space-between;
   position: absolute;
   bottom: 0;
+}
+
+
+
+
+
+
+.explanation {
+  font-size: 20px;
+  text-align: center;
+  margin: 50px 20px 100px 20px;
+}
+
+
+
+
+
+.footer {
+  font-size: 5px;
+  font-family: "リュウミン L-KL";
+  background-color: rgb(220, 220, 220);
+  margin-top: max(3.66vw, 12px);
+  padding: 3.66vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#bottom-logo {
+  width: max(14.64vw, 90px);
+}
+
+.footer-content {
+  font-size: max(1.1vw, 7px);
 }
