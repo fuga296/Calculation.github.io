@@ -1,8 +1,8 @@
-// 計算、ユーザー認証
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.loggedin-message').innerHTML = `${localStorage.getItem('userName')}さんはすでに登録されています`
     selectContent();
     getUserName();
+    calculate();
 });
 
 function selectContent() {
@@ -36,7 +36,6 @@ function showContent(content) {
 }
 
 
-
 function getUserName() {
     document.querySelector('#user-name-btn').onclick = function() {
         userName = document.querySelector('#user-name').value;
@@ -48,4 +47,71 @@ function getUserName() {
         alert('空文字は使用できません');
         }
     };
+}
+
+
+
+function calculate() {
+    document.querySelector('#calculate-btn').onclick = function() {
+        const formulaString = document.querySelector('#input-formula').value;
+        document.querySelector('#input-formula').value = '';
+        let quit = checkFormula(formulaString);
+        if (!quit) {return false;};
+        const formula = normalization(formulaString);
+        document.querySelector('#result').innerHTML = eval(formula);
+    }
+}
+
+
+function checkFormula(formulaString) {
+    const reBase = /^[0-9+\-*/()! ]*$/;
+    const reSymbol1 = /[+\-*/!]{2,}/;
+    const reSymbol2 = /![+\-*/]/;
+
+    if (formulaString === '') {
+        alert('空文字は不適切です');
+        return false;
+    }
+
+    if (!reBase.test(formulaString)) {
+        alert('数字と指定された演算子以外の文字を使用しないでください');
+        return false;
+    }
+
+    if ((reSymbol1.test(formulaString)) & !reSymbol2.test(formulaString)) {
+        alert('記号を2回以上連続させないでください');
+        return false;
+    }
+
+    if (!(( formulaString.match( /\(/g ) || [] ).length === (formulaString.match(/\)/g) || []).length)) {
+        alert('()を閉じてください');
+        return false;
+    }
+
+    if ((formulaString.match(/[^0-9]*?/g) || []).length === 0) {
+        alert('数字が必要です');
+        return false;
+    }
+    return true;
+}
+
+function normalization(formulaString) {
+    const reFactorial = /(\d+)!/;
+    const formula = formulaString.replace(reFactorial, (match, n) => {
+        return factorial(parseInt(n));
+    });
+    return formula;
+}
+
+function factorial(n) {
+    if (Number.isInteger(n)) {
+        let tmp = 1
+        for (let i = 1; i <= n; i++) {
+            tmp *= i;
+        }
+        return tmp;
+    } else {
+        alert('階乗の引数は自然数にしてください');
+        return null;
+    }
 }
