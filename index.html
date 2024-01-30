@@ -9,7 +9,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- TODO:すべてのページの作成、スタイルの充実、CSSでの機能の充実、レスポンシブデザイン、CS機能、JS -->
+        <!-- TODO:すべてのページの作成、スタイルの充実、CSSでの機能の充実、レスポンシブデザイン、CS機能、JS フッターのsvcのレスポンシブデザイン -->
     </head>
     <body>
 
@@ -31,7 +31,6 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><button class="dropdown-item content-btn" data-content="home-content">ホーム</button></li>
                     <li><button class="dropdown-item content-btn" data-content="main-content">メインコンテンツ</button></li>
                     <li><button class="dropdown-item content-btn" data-content="contact-content">連絡先</button></li>
                     <li><button class="dropdown-item content-btn" data-content="explanation-content">このサイトの説明</button></li>
@@ -41,9 +40,9 @@
 
 
         <div class="main-content content">
-            <h1 id="heading">四則演算及び階乗の計算</h1>
+            <h1 class="heading">四則演算及び階乗の計算</h1>
 
-            <form class="mb-3">
+            <form class="mb-3" id="formula-form">
                 <input type="text" autofocus placeholder="計算式を入力してください" class="form-control" id="input-formula">
                 <input type="submit" value="計算" class="btn btn-primary" id="calculate-btn">
             </form>
@@ -107,29 +106,55 @@
         </div>
 
         <div class="user-content-loggedin content">
-            <h1>あなたはすでに登録されています</h1>
+            <h1 class="heading">あなたはすでに登録されています</h1>
+            <button class="btn btn-primary content-btn" data-content="main-content">メインコンテンツに戻る</button>
+            <div class="message">
+                <div>もし情報を保存したくない場合、シークレットウィンドウを使うか、</div>
+                <div>右クリックして検証を押してのApplicationのLocalStorageから直接値を消してください。</div>
+            </div>
         </div>
 
         <div class="user-content-notloggedin content">
-            <form class="input-form">
+            <h1 class="heading">ユーザーネーム情報の記憶</h1>
+            <form class="user-form">
                 <label for="user-name" class="form-label" id="label">ユーザーネーム：</label>
                 <input type="text" class="form-control" id="user-name" placeholder="user name">
                 <button type="submit" class="btn btn-primary" id="user-name-submit">送信</button>
             </form>
 
             <div class="message">
-                <div>これはLocalStrageの練習です。もし情報を保存したくないなら、シークレットウィンドウを使うか、</div>
-                <div>右クリックして検証を押してのApplicationのLocalStorageから直接消してください。</div>
+                <div>もし情報を保存したくない場合、シークレットウィンドウを使うか、</div>
+                <div>右クリックして検証を押してのApplicationのLocalStorageから直接値を消してください。</div>
             </div>
         </div>
 
-        <div class="home-content content">
-        </div>
-
         <div class="contact-content content">
+            <h1 class="heading">連絡先</h1>
+            <table class="table table-striped contact-table">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>連絡媒体</td>
+                        <td>連絡先</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Gmail</td>
+                        <td>fu121gam1729@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Instagram</td>
+                        <td>fu_121_ga_1729</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="explanation-content content">
+            <h1 class="heading">このサイトの説明</h1>
             <div class="explanation">
                 <div>このサイトは四則演算と階乗の計算を行うサイトです。</div>
                 <div>入力欄に(), +, -, *, /, !の記号と数字を既定の組み合わせで入力すると計算結果が得られます。各演算子の説明は以下の通りです。</div>

@@ -6,7 +6,7 @@ body{
 }
 
 
-
+/* header */
 .header {
   display: flex;
   justify-content: center;
@@ -43,12 +43,12 @@ body{
   background-color: #1b818d;
   border: none;
   outline: none;
-  margin-left: 20px;
+  margin-left: max(1.464vw, 10px);
   margin-right: 15px;
 }
 
 
-
+/* main-content */
 .content {
   display: none;
 }
@@ -57,7 +57,7 @@ body{
   display: block;
 }
 
-#heading {
+.heading {
   font-size: max(16px, 3vw);
   font-weight: bold;
   margin-top: 30px;
@@ -67,7 +67,7 @@ body{
 
 
 
-form {
+#formula-form {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,57 +120,72 @@ form {
 
 
 
-
-.input-form {
+/* user-content */
+.user-form {
   display: flex;
   flex-direction: row;
   margin: 60px 10px 10px 10px;
 }
 
 #label {
-  font-size: 30px;
+  font-size: max(2.2vw, 20px);
 }
 
 #user-name {
-  font-size: 25px;
-  width: 800px;
-  height: 50px;
+  font-size: 1.83vw;
+  width: 58.57%;
+  height: max(3.66vw, 30px);
   margin-right: 10px;
   margin-left: 30px;
 }
 
 #user-name-submit {
-  width: 80px;
-  height: 51px;
+  font-size: 1.5vw;
+  width: max(5.86%, 56px);
+  height: max(3.73vw, 30px);
 }
 
 .message {
-  font-size: 20px;
+  font-size: max(1.464vw, 15px);
   text-align: center;
+  margin-top: 110px;
+}
+
+@media (max-width: 720px) {
+  .user-form {
+    display: block;
+  }
+
+  #user-name {
+    font-size: 15px;
+    width: 80%;
+    height: 40px;
+    margin-right: 0;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+
+  #user-name-submit {
+    font-size: 15px;
+    margin-top: 12px;
+    width: 65px;
+    height: 45px;
+  }
+}
+
+/* contact-content */
+.contact-table {
+  font-size: max(1.4vw, 12px);
   margin-top: 100px;
-}
-
-
-
-.footer1 {
-  font-size: 5px;
-  width: 100%;
-  font-family: "リュウミン L-KL";
-  background-color: rgb(220, 220, 220);
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
+  border-bottom: rgb(193, 191, 191);
 }
 
 
 
 
-
-
+/* explanation */
 .explanation {
-  font-size: 20px;
+  font-size: max(1.464vw, 15px);
   text-align: center;
   margin: 50px 20px 100px 20px;
 }
@@ -178,7 +193,7 @@ form {
 
 
 
-
+/* footer */
 .footer {
   font-size: 5px;
   font-family: "リュウミン L-KL";
