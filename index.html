@@ -9,6 +9,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- TODO:すべてのページの作成、スタイルの充実、CSSでの機能の充実、レスポンシブデザイン、CS機能、JS -->
     </head>
     <body>
 
@@ -17,8 +18,8 @@
                 <img src="images/logo.jpg" alt="ロゴ" width="300" class="img-fluid" id="logo">
             </a>
 
-            <a href="forms.html" id="user-btn">
-                <button class="btn btn-outline-primary" type="button">
+            <a href="forms.html" id="user-link">
+                <button id="user-btn" class="btn  btn-secondary dropdown-toggle btn-outline-primary" type="button">
                     <svg width="50" height="50" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="user-icon">
                         <path d="M11 6C11 7.65685 9.65685 9 8 9C6.34315 9 5 7.65685 5 6C5 4.34315 6.34315 3 8 3C9.65685 3 11 4.34315 11 6Z" fill="white"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8ZM8 1C4.13401 1 1 4.13401 1 8C1 9.65343 1.57326 11.173 2.53186 12.3707C3.24293 11.2252 4.80464 10 8.00001 10C11.1954 10 12.7571 11.2252 13.4681 12.3707C14.4267 11.173 15 9.65343 15 8C15 4.13401 11.866 1 8 1Z" fill="white"/>
@@ -42,7 +43,7 @@
         </div>
 
 
-        <div class="content">
+        <div class="main-content">
             <h1 id="heading">四則演算及び階乗の計算</h1>
 
             <form class="mb-3">
@@ -53,6 +54,59 @@
             <div class="result-area">
                 <h1 id="result">計算結果がここに表示されます</h1>
             </div>
+
+            <table class="table table-striped" id="operators">
+                <thead>
+                    <td>優先度</td>
+                    <td>演算子</td>
+                    <td>説明</td>
+                    <td>使い方</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td class="operator">( )</td>
+                        <td>優先度の変更</td>
+                        <td>a + (b + c) ⇒ b + c をした後、aを足す</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td class="operator">!</td>
+                        <td>階乗</td>
+                        <td>a! ⇒ 1からaまでのすべての自然数の積</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td class="operator">*</td>
+                        <td>乗算</td>
+                        <td>a * b ⇒ aとbの積</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td class="operator">/</td>
+                        <td>除算</td>
+                        <td>a / b ⇒ aとbの商</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td class="operator">+</td>
+                        <td>加算</td>
+                        <td>a + b ⇒ aとbの和</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td class="operator">-</td>
+                        <td>減算</td>
+                        <td>a - b ⇒ aとbの差</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>なし</td>
+                        <td>順次処理</td>
+                        <td>a * b + c * d ⇒ aとbの積とcとdの積の和</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
 
