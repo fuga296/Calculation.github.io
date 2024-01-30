@@ -1,5 +1,8 @@
+// 計算、ユーザー認証
 document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.loggedin-message').innerHTML = `${localStorage.getItem('userName')}さんはすでに登録されています`
     selectContent();
+    getUserName();
 });
 
 function selectContent() {
@@ -9,10 +12,10 @@ function selectContent() {
             if (showcontent !== 'user-content') {
                 showContent(this.dataset.content);
             } else {
-                if (!localStorage.getItem('user-name')) {
-                    showContent('user-content-notloggedin');
-                } else {
+                if (localStorage.getItem('userName')) {
                     showContent('user-content-loggedin');
+                } else {
+                    showContent('user-content-notloggedin');
                 }
             }
         };
@@ -22,6 +25,7 @@ function selectContent() {
             showContent('main-content')
         }
     });
+    document.querySelector('#user-name').value = '';
 }
 
 function showContent(content) {
@@ -29,4 +33,19 @@ function showContent(content) {
         content.style.display = 'none';
     });
     document.querySelector(`.${content}`).style.display = 'block';
+}
+
+
+
+function getUserName() {
+    document.querySelector('#user-name-btn').onclick = function() {
+        userName = document.querySelector('#user-name').value;
+        if (userName !== '') {
+            localStorage.setItem('userName', userName);
+            document.querySelector('#user-name').value = '';
+            selectContent('main-content');
+        } else {
+        alert('空文字は使用できません');
+        }
+    };
 }

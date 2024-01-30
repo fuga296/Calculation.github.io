@@ -9,7 +9,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- TODO:すべてのページの作成、スタイルの充実、CSSでの機能の充実、レスポンシブデザイン、CS機能、JS フッターのsvcのレスポンシブデザイン -->
+        <!-- TODO:JS フッターのsvcのレスポンシブデザイン -->
     </head>
     <body>
 
@@ -106,8 +106,10 @@
         </div>
 
         <div class="user-content-loggedin content">
-            <h1 class="heading">あなたはすでに登録されています</h1>
-            <button class="btn btn-primary content-btn" data-content="main-content">メインコンテンツに戻る</button>
+            <h1 class="heading loggedin-message">あなたはすでに登録されています</h1>
+            <div id="back-btn">
+                <button class="btn btn-primary content-btn" data-content="main-content">メインコンテンツに戻る</button>
+            </div>
             <div class="message">
                 <div>もし情報を保存したくない場合、シークレットウィンドウを使うか、</div>
                 <div>右クリックして検証を押してのApplicationのLocalStorageから直接値を消してください。</div>
@@ -119,7 +121,7 @@
             <form class="user-form">
                 <label for="user-name" class="form-label" id="label">ユーザーネーム：</label>
                 <input type="text" class="form-control" id="user-name" placeholder="user name">
-                <button type="submit" class="btn btn-primary" id="user-name-submit">送信</button>
+                <button type="submit" class="btn btn-primary" id="user-name-btn">送信</button>
             </form>
 
             <div class="message">
@@ -215,7 +217,7 @@
 
 
         <div class="footer">
-            <img src="images/logo.jpg" alt="ロゴ" width="200" id="bottom-logo" class="img-fluid rounded  logo">
+            <img src="images/logo.jpg" alt="ロゴ" id="bottom-logo" class="img-fluid rounded  logo">
 
             <div class="footer-content">
                 <div>

@@ -43,8 +43,8 @@ body{
   background-color: #1b818d;
   border: none;
   outline: none;
-  margin-left: max(1.464vw, 10px);
-  margin-right: 15px;
+  margin-left: max(1.464vw, 8px);
+  margin-right: 12px;
 }
 
 
@@ -113,14 +113,20 @@ body{
 }
 
 .operator {
-  font-size: max(1.46vw, 15px);
+  font-size: max(1.46vw, 13px);
   font-weight: bold;
 }
 
 
 
 
-/* user-content */
+/* user-content-loggedin */
+#back-btn {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* user-content-notloggedin */
 .user-form {
   display: flex;
   flex-direction: row;
@@ -139,7 +145,7 @@ body{
   margin-left: 30px;
 }
 
-#user-name-submit {
+#user-name-btn {
   font-size: 1.5vw;
   width: max(5.86%, 56px);
   height: max(3.73vw, 30px);
@@ -148,7 +154,7 @@ body{
 .message {
   font-size: max(1.464vw, 15px);
   text-align: center;
-  margin-top: 110px;
+  margin-top: 90px;
 }
 
 @media (max-width: 720px) {
@@ -165,7 +171,7 @@ body{
     margin-top: 10px;
   }
 
-  #user-name-submit {
+  #user-name-btn {
     font-size: 15px;
     margin-top: 12px;
     width: 65px;
@@ -199,15 +205,16 @@ body{
   font-family: "リュウミン L-KL";
   background-color: rgb(220, 220, 220);
   margin-top: max(3.66vw, 12px);
-  padding: 3.66vw;
+  padding: 3.6vw;
   display: flex;
   justify-content: space-between;
 }
 
 #bottom-logo {
-  width: max(14.64vw, 90px);
+  width: max(14.64vw, 80px);
 }
 
 .footer-content {
   font-size: max(1.1vw, 7px);
+  margin-left: max(14.6vw, 4px);
 }
