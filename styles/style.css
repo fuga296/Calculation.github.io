@@ -23,13 +23,13 @@ body{
 }
 
 .user-icon {
-  width: max(3.66vw, 20px);
-  height: max(3.66vw, 20px);
+  width: max(3.66vw, 10px);
+  height: max(3.66vw, 10px);
 }
 
 .menu-icon {
-  width: max(3.66vw, 20px);
-  height: max(3.66vw, 20px);
+  width: max(3.66vw, 10px);
+  height: max(3.66vw, 10px);
 }
 
 #user-btn {
@@ -121,7 +121,7 @@ body{
 
 
 /* user-content-loggedin */
-#back-btn {
+#btn-div {
   margin-top: 30px;
   text-align: center;
 }

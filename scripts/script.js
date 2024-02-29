@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     selectContent();
     getUserName();
     calculate();
+    logout();
 });
 
 function selectContent() {
@@ -50,6 +51,12 @@ function getUserName() {
     };
 }
 
+function logout() {
+    document.querySelector('#logout-btn').onclick = function() {
+        localStorage.removeItem('userName');
+        selectContent('user-content');
+    }
+}
 
 
 function calculate() {
@@ -59,7 +66,7 @@ function calculate() {
         let quit = checkFormula(formulaString);
         if (!quit) {return false;};
         const formula = normalization(formulaString);
-        document.querySelector('#result').innerHTML = eval(formula);
+        document.querySelector('#result').innerHTML = BigInt(eval(formula));
     }
 }
 
@@ -98,8 +105,8 @@ function checkFormula(formulaString) {
 
 function normalization(formulaString) {
     const reFactorial = /(\d+)!/;
-    const formula = formulaString.replace(reFactorial, (match, n) => {
-        return factorial(parseInt(n));
+    formula = formula.replace(reFactorial, n => {
+        return `factorial(${parseInt(n)})`;
     });
     return formula;
 }
