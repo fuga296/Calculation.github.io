@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="auther" content="Fuga Matsunaga">
+        <meta
+        name="description"
+        content="このwebサイトは誰のためでもなく自分のためだけに作られたサイトで、日記やメモなどをスムーズかつ高機能に使うことを目的としています。">
+        <title>ログインする</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/login-style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#"><img src="..\images\logo2.jpg" alt="logo" width="300"></a>
+        </header>
+
+        <div class="login-box">
+            <form class="login-form">
+                <p>ログイン</p>
+                <hr>
+
+                <div class="row align-items-center login-form-box name-form-box">
+                    <div class="name-form col-auto name-label-box">
+                        <label for="name" class="name-label col-form-label">ユーザーネーム: </label>
+                    </div>
+
+                    <div class="name-form col-auto input-name-box">
+                        <input type="text" minlength="3" maxlength="32" placeholder="foobar" id="name" name="name" class="input-name form-control form-control-sm">
+                    </div>
+
+                    <span class="name-alert"></span>
+                </div>
+
+                <div class="row align-items-center login-form-box pass-form-box">
+                    <div class="pass-form col-auto pass-label-box">
+                        <label for="pass" class="pass-label">パスワード: </label>
+                    </div>
+
+                    <div class="pass col-auto input-pass-box">
+                        <input type="password" placeholder="abc123" id="pass" name="pass" class="input-pass form-control-sm form-control">
+                    </div>
+
+                    <span class="pass-alert"></span>
+                </div>
+
+                <p class="guide">新規登録は<a href="#">こちら</a>です。</p>
+                <button type="submit" class="btn btn-primary">次へ</button>
+            </form>
+        </div>
+
+        <footer>
+            <a href="#">フィードバックを送る</a>
+        </footer>
+    </body>
+</html>
