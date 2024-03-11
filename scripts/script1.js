@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // dbidの送信
     dbidSubmit.addEventListener('click', function() {
         const dbid = dbidInput.value;
-        // console.log("OK", isPromiseFulfilled('secret_Mhsn81CQB8OmdKJ1TuqPYA03PDfiCbMs9I2aCUWdiFG', dbid));
+        console.log("OK", isPromiseFulfilled('secret_Mhsn81CQB8OmdKJ1TuqPYA03PDfiCbMs9I2aCUWdiFG', dbid));
         // 値の取得
         // APIとつなげる
         // 正誤
@@ -170,13 +170,4 @@ document.addEventListener('DOMContentLoaded', function() {
             throw error;
         }
     }
-
-    getDB('secret_Mhsn81CQB8OmdKJ1TuqPYA03PDfiCbMs9I2aCUWdiFG', 'c9df84e1f0c14d97ace1fb5f5ebe346c')
-        .then(items => {
-            const test = items[32].properties
-            console.log(test.No.formula.number - 0.375, test.date.date.start, test.content.title[0].plain_text, items[32]);
-        })
-        .catch(error => {
-            console.error('Fetch Error:', error);
-        });
 })
