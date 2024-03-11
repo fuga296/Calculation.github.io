@@ -1,0 +1,75 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	min-height: 100vh;
+    margin: 0;
+
+    font-family: Noto Sans Japanese;
+}
+
+.login-box {
+    height: calc(fit-content + 100000px);
+    width: max(430px, 40vw);
+    margin: 0 auto;
+    border: 3px solid #9cbdff;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.login-form::first-line {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.login-form {
+    margin: 20px;
+}
+
+.login-form-box {
+    margin-bottom: 20px;
+}
+
+.pass-form-box {
+    margin-bottom: 100px;
+}
+
+.name-form, .pass-form {
+    font-size: max(18px, 1.3vw);
+    display: inline-block;
+}
+
+.input-name-box {
+    width: 61%;
+}
+
+.input-pass-box {
+    width: 70%;
+}
+
+.guide {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    font-size: 16px;
+}
+
+.btn {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+
+header  {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}

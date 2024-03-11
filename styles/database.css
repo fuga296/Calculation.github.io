@@ -1,0 +1,272 @@
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-top: 55px;
+    font-family: Noto Sans Japanese;
+}
+
+
+/* ヘッダー関連 */
+.header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+#menu-icon::after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: white;
+    background-position: center;
+    background-image: url('data:image/svg+xml,\<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 12 9" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.5C0.5 8.22386 0.723858 8 1 8H11C11.2761 8 11.5 8.22386 11.5 8.5C11.5 8.77614 11.2761 9 11 9H1C0.723858 9 0.5 8.77614 0.5 8.5Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 4.5C0.5 4.22386 0.723858 4 1 4H11C11.2761 4 11.5 4.22386 11.5 4.5C11.5 4.77614 11.2761 5 11 5H1C0.723858 5 0.5 4.77614 0.5 4.5Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 0.5C0.5 0.223858 0.723858 0 1 0H11C11.2761 0 11.5 0.223858 11.5 0.5C11.5 0.776142 11.2761 1 11 1H1C0.723858 1 0.5 0.776142 0.5 0.5Z" fill="black"/></svg>');
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+#menu-icon:hover::after {
+    background-color: rgb(226, 226, 226);
+    background-image: url('data:image/svg+xml,\<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 1.64645C3.84171 1.45118 4.15829 1.45118 4.35355 1.64645L10.3536 7.64645C10.5488 7.84171 10.5488 8.15829 10.3536 8.35355L4.35355 14.3536C4.15829 14.5488 3.84171 14.5488 3.64645 14.3536C3.45118 14.1583 3.45118 13.8417 3.64645 13.6464L9.29289 8L3.64645 2.35355C3.45118 2.15829 3.45118 1.84171 3.64645 1.64645Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.64645 1.64645C7.84171 1.45118 8.15829 1.45118 8.35355 1.64645L14.3536 7.64645C14.5488 7.84171 14.5488 8.15829 14.3536 8.35355L8.35355 14.3536C8.15829 14.5488 7.84171 14.5488 7.64645 14.3536C7.45118 14.1583 7.45118 13.8417 7.64645 13.6464L13.2929 8L7.64645 2.35355C7.45118 2.15829 7.45118 1.84171 7.64645 1.64645Z" fill="black"/></svg>'    );
+    transition: 0.3s;
+}
+
+#menu-icon:active::after {
+    background-color: rgb(188, 188, 188);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+/* サイドバー関連 */
+.sidebar-supporter {
+    position: fixed;
+    top: 38px;
+
+    height: calc(100vh - 38px);
+    width: 12.5vw;
+
+    transition: 0.3s;
+}
+
+.sidebar-supporter:hover ~ .sidebar {
+    left: 0;
+    transition: 0.3s;
+}
+
+
+.sidebar {
+    height: calc(80vh);
+    width: min(244.8px, 25vw);
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+
+    position: fixed;
+    top: 65px;
+    left: -260px;
+    transition: 0.4s;
+
+    overflow: hidden auto;
+}
+
+.header:has( > #menu-icon:hover) ~ .sidebar {
+    left: 0;
+    transition: 0.3s;
+}
+
+.sidebar:hover {
+    left: 0;
+}
+
+.side-btn {
+    font-size: min(13px, 1.7vw);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.page-menu, .footer {
+    margin-top: 30px;
+}
+
+.side-btn {
+    width: 98%;
+    border: none;
+    outline: none;
+    background-color: white;
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 2px;
+    border-radius: 3px;
+    transition: 0.4s;
+
+    display: flex;
+    align-items: center;
+}
+
+.side-btn:hover {
+    filter: brightness(0.9216);
+    transition: 0.3s;
+}
+
+.side-btn:active {
+    filter: brightness(0.8078);
+    transition: 0.3s;
+}
+
+/* サイドバーアイコン */
+.side-btn span {
+    margin-left: 7px;
+}
+
+.db-btn::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M13 0H6C4.89543 0 4 0.89543 4 2C2.89543 2 2 2.89543 2 4V14C2 15.1046 2.89543 16 4 16H11C12.1046 16 13 15.1046 13 14C14.1046 14 15 13.1046 15 12V2C15 0.89543 14.1046 0 13 0ZM13 13V4C13 2.89543 12.1046 2 11 2H5C5 1.44772 5.44772 1 6 1H13C13.5523 1 14 1.44772 14 2V12C14 12.5523 13.5523 13 13 13ZM3 4C3 3.44772 3.44772 3 4 3H11C11.5523 3 12 3.44772 12 4V14C12 14.5523 11.5523 15 11 15H4C3.44772 15 3 14.5523 3 14V4Z" fill="black"/></svg>');
+    background-position: center;
+    background-position: center;background-repeat: no-repeat;
+}
+
+
+.side-logo {
+    width: 98%;
+    border-bottom: 1px solid #b2b2b2;
+    margin-top: 10px;
+}
+
+
+.feedback-link {
+    text-decoration: none;
+}
+
+
+
+/* メインコンテンツ */
+.page-container {
+    display: grid;
+    margin-top: 50px;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 54vw 1fr;
+}
+
+.get-dbid-box {
+    text-align: center;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.get-dbid-box div {
+    display: inline-block;
+    margin-right: 1.4vw;
+}
+
+.dbid-box {
+    width: calc(100% - 5.6vw - 35px);
+}
+
+.dbid-input {
+    height: min(37.6px, calc(5vw + 1.4px));
+    font-size: min(16px, 2vw);
+}
+
+.dbid-submit {
+    height: min(37.6px, calc(5vw + 1.4px));
+    width: calc(4vw + 10px);
+    font-size: calc(0.8vw + 5px);
+    padding-left: 0.83vw;
+    padding-right: 0.83vw;
+}
+
+
+.page, .pages {
+    margin-top: 55px;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.db-title {
+    text-align: center;
+}
+
+.db-datas {
+    height: 200px;
+    background-color: #a6a6a6;
+}
+
+.db-message {
+    text-align: center;
+}
+
+
+.page, .pages, .get-dbid-box {
+    display: none;
+}
+
+#how-to-use-page {
+    display: block;
+}
+
+
+
+
+
+
+/* jsスタイリング showSidebar */
+.sidebar.expanded {
+    height: 100vh;
+    border-right: 1px solid #e6e6e6;
+    border-radius: 0;
+    box-shadow: none;
+
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.sidebar.shrunken {
+    height: 80vh;
+    border-right: none;
+    border-radius: 3px;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+
+    top: 65px;
+    transition: 0.4s;
+}
+
+
+.header.expanded {
+    left: calc(min(244.8px, 25vw) + 10px);
+    transition: 0.3s;
+}
+
+.header.shrunken {
+    left: 10px;
+    transition: 0.3s;
+}
+
+
+#menu-icon.expanded::after  {
+    background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M8.35355 1.64645C8.54882 1.84171 8.54882 2.15829 8.35355 2.35355L2.70711 8L8.35355 13.6464C8.54882 13.8417 8.54882 14.1583 8.35355 14.3536C8.15829 14.5488 7.84171 14.5488 7.64645 14.3536L1.64645 8.35355C1.45118 8.15829 1.45118 7.84171 1.64645 7.64645L7.64645 1.64645C7.84171 1.45118 8.15829 1.45118 8.35355 1.64645Z" fill="black"/%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M12.3536 1.64645C12.5488 1.84171 12.5488 2.15829 12.3536 2.35355L6.70711 8L12.3536 13.6464C12.5488 13.8417 12.5488 14.1583 12.3536 14.3536C12.1583 14.5488 11.8417 14.5488 11.6464 14.3536L5.64645 8.35355C5.45118 8.15829 5.45118 7.84171 5.64645 7.64645L11.6464 1.64645C11.8417 1.45118 12.1583 1.45118 12.3536 1.64645Z" fill="black"/%3E%3C/svg%3E');
+}
+
+
+.page-container.expanded {
+    margin-left: min(244.8px, 25vw);
+    transition: 0.3s;
+}
+
+.page-container.shrunken {
+    margin-left: 0;
+    transition: 0.3s;
+}
